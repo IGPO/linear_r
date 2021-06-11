@@ -7,7 +7,7 @@ from sklearn.metrics import mean_squared_error
 
 # Reading training dataset
 print('Reading training dataset')
-file = "internship_train.csv"
+file = "input_data/internship_train.csv"
 dataset = pd.read_csv(file)
 
 y = dataset.target          # target
@@ -32,7 +32,7 @@ print("Root Mean Square Error:\n", np.sqrt(mean_squared_error(val_y, val_y_predi
 
 # Reading dataset for prediction
 print('Reading dataset for prediction')
-p_file = "internship_hidden_test.csv"
+p_file = "input_data/internship_hidden_test.csv"
 p_dataset = pd.read_csv(p_file)
 
 # Evaluating predictions
@@ -43,5 +43,3 @@ predictions = my_model.predict(p_dataset)
 print('Saving predictions')
 np.savetxt("predictions.csv", predictions, delimiter=",")
 print('Done')
-pip-dump
-
